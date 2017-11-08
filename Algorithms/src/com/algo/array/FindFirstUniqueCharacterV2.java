@@ -3,7 +3,7 @@ package com.algo.array;
 import java.util.HashMap;
 
 /*
- Problem: Fins first unique character in the give string of characters. Consider small 'a' and capital 'A' equivalent,i.e. case insensitive. 
+ Problem: Find first unique character in the give string of characters. Consider small 'a' and capital 'A' equivalent,i.e. case insensitive. 
  */
 public class FindFirstUniqueCharacterV2 {
 

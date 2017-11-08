@@ -3,7 +3,7 @@ package com.algo.array;
 import java.util.HashMap;
 
 /*
- Problem: Fins first unique character in the give string of characters 
+ Problem: Find first unique character in the give string of characters 
  */
 public class FindFirstUniqueCharacter {
 
