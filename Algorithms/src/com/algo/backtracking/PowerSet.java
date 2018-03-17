@@ -10,16 +10,21 @@ public class PowerSet {
 	}
 
 	public static void helperPowerSet(ArrayList<Character> charList, ArrayList<ArrayList<Character>> psList) {
+		System.out.println(String.format("Character List = %s , Chosen List = %s", charList, psList));
 		if (charList.isEmpty()) {
-			psList.add(new ArrayList<>());
+			// psList.add(new ArrayList<>());
 		} else {
-			for (int i = 0; i < charList.size(); i++) {
-				Character chosen = charList.remove(0);
+			int tempSize = charList.size();
+			for (int i = 0; i < tempSize; i++) {
+				
+				/*Character chosen = charList.remove(0);
 				ArrayList<Character> chosenList = new ArrayList<>();
 				chosenList.add(chosen);
 				psList.add(chosenList);
 				helperPowerSet(charList, psList);
-				charList.add(0, chosen);
+				charList.add(0, chosen);*/
+				
+				
 			}
 		}
 	}
