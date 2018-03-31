@@ -12,7 +12,7 @@ public class Reverse_Words_In_A_String_Two {
 
 	public void reverseWords(char[] str) {
 		int len = str.length;
-		// reverseWord(str, 0, len - 1);
+		reverseWord(str, 0, len - 1);
 		int j = 0;
 		for (int i = 0; i < len; i++) {
 			if (str[i] == ' ') {
