@@ -24,9 +24,6 @@ public class GridSum2 {
 		grid[0][0] = 9;	grid[0][1] = 9;	grid[0][2] = 9;
 		grid[1][0] = 9;	grid[1][1] = 5;	grid[1][2] = 9;
 		grid[2][0] = 1;	grid[2][1] = 3;	grid[2][2] = 2;		
-
-		
-		
 		
 		GridSum2 sol = new GridSum2();		
 		int result = sol.maxSum(grid);
@@ -37,16 +34,14 @@ public class GridSum2 {
 	public int maxSum(int[][] grid) {
 		int maxSum = 0;
 		for (int i = 0; i < grid.length; i++) {
-			for (int j = 0; j < grid[i].length; j++) {				
+			for (int j = 0; j < grid[i].length; j++) {
 				//maxSum = Math.max(maxSum, sum(grid[i][j], grid[i][j-1], grid[i][j+1], grid[i-1][j], grid[i+1][j]));				
-				
-				
-				maxSum = Math.max(maxSum, sum(
-						grid[i][j], 
-						(j-1<0)?0:grid[i][j-1], 
-								(j+1)>=grid.length?0:grid[i][j+1],
-										(i-1<0)?0:grid[i-1][j],
-												(i+1>=grid.length)?0:grid[i+1][j]));
+				int current = grid[i][j];
+				int left = (j-1<0)?0:grid[i][j-1];
+				int right = (j+1)>=grid.length?0:grid[i][j+1];
+				int top = (i-1<0)?0:grid[i-1][j];
+				int bottom = (i+1>=grid.length)?0:grid[i+1][j];
+				maxSum = Math.max(maxSum, sum(	current,left,right,top,bottom));
 			}
 		}
 		return maxSum;
